@@ -1,30 +1,32 @@
-
-Certainly! To create a big green button with a custom picture background, you can use CSS to style the button and set the background image. Here's an updated version of the code that includes the custom picture background:
-
-html
-Copy code
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Random Link</title>
 	<style>
-		.button {
-			display: inline-block;
-			padding: 20px;
-			background-color: green;
-			border: none;
-			border-radius: 10px;
-			cursor: pointer;
-			background-image: url('clicki.gif');
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: url('70079fc02a563b5fb9fe6002d65966d1.jpg');
 			background-size: cover;
-			color: #fff;
-			font-size: 18px;
+		}
+
+		.button {
+			background-color: green;
+			color: white;
+			padding: 20px 40px;
+			font-size: 24px;
+			border: none;
+			cursor: pointer;
 		}
 	</style>
 	<script type="text/javascript">
 		function getRandomLink() {
 			var links = [
-	    "https://bestrizzard-fr.onrender.com",
+		"https://bestrizzard-fr.onrender.com",
         "https://diet.fitnessdieta.com/",
         "https://computers.rebol.info/",
         "https://health.youramys.com"
@@ -39,3 +41,4 @@ Copy code
 	<button class="button" onclick="window.open(getRandomLink(), '_blank')">Click for Random Link</button>
 </body>
 </html>
+
