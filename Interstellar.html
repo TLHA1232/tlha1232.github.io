@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Random URL Redirection</title>
-  </head>
-  <body>
-    <script>
-      // Define the list of URLs to choose from
-      var urls = [
+<head>
+	<title>Random Link</title>
+	<style>
+		.big-green-button {
+			display: inline-block;
+			padding: 20px 40px;
+			font-size: 24px;
+			background-color: green;
+			color: white;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript">
+		function getRandomLink() {
+			var links = [
         "https://bestrizzard-fr.onrender.com",
         "https://diet.fitnessdieta.com/",
         "https://computers.rebol.info/",
         "https://health.youramys.com"
-      
 
-      ];
-
-      // Choose a random URL from the list
-      var randomUrl = urls[Math.floor(Math.random() * urls.length)];
-
-      // Redirect to the random URL
-      window.location.href = randomUrl;
-    </script>
-  </body>
+			];
+			var randomIndex = Math.floor(Math.random() * links.length);
+			var randomLink = links[randomIndex];
+			return randomLink;
+		}
+	</script>
+</head>
+<body>
+	<button class="big-green-button" onclick="window.open(getRandomLink(), '_blank')">Click for Random Link</button>
+</body>
 </html>
