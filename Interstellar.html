@@ -8,6 +8,8 @@
 			margin: 0;
 			padding: 0;
 			display: flex;
+			justify-content: center;
+			align-items: center;
 			background-image: url('clicki.gif');
 			background-size: cover;
 		}
@@ -20,23 +22,28 @@
 			border: none;
 			cursor: pointer;
 		}
+
+		.button.clicked {
+			background-color: red;
+		}
 	</style>
 	<script type="text/javascript">
 		function getRandomLink() {
 			var links = [
-		"https://bestrizzard-fr.onrender.com",
-        "https://diet.fitnessdieta.com/",
-        "https://computers.rebol.info/",
-        "https://health.youramys.com"
+				"https://bestrizzard-fr.onrender.com",
+				"https://diet.fitnessdieta.com/",
+				"https://computers.rebol.info/",
+				"https://health.youramys.com"
 			];
 			var randomIndex = Math.floor(Math.random() * links.length);
 			var randomLink = links[randomIndex];
+			var button = document.getElementById('myButton');
+			button.classList.add('clicked');
 			return randomLink;
 		}
 	</script>
 </head>
 <body>
-	<button class="button" onclick="window.open(getRandomLink(), '_blank')">Click for Random Interstellar Link</button>
+	<button id="myButton" class="button" onclick="window.open(getRandomLink(), '_blank')">Click for Random Link</button>
 </body>
 </html>
-
